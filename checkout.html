@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Checkout</title>
+    <link rel="stylesheet" href="checkout.css">
+</head>
+
+<body>
+    <div class="checkout-container">
+        <h1>Checkout</h1>
+        <form id="checkoutForm">
+            <!-- Order Summary -->
+            <section class="order-summary">
+                <h2>Order Summary</h2>
+                <div class="order-items">
+                    <div class="order-item">
+                        <span>Product 1</span>
+                        <span>$100.00</span>
+                    </div>
+                    <div class="order-item">
+                        <span>Product 2</span>
+                        <span>$150.00</span>
+                    </div>
+                    <!-- More items here -->
+                </div>
+                <div class="order-total">
+                    <span>Total:</span>
+                    <span id="orderTotal">$250.00</span>
+                </div>
+            </section>
+
+            <!-- Shipping Information -->
+            <section class="shipping-info">
+                <h2>Shipping Information</h2>
+                <div>
+                    <label for="fullName">Full Name:</label>
+                    <input type="text" id="fullName" name="fullName" required>
+                </div>
+                <div>
+                    <label for="address">Address:</label>
+                    <input type="text" id="address" name="address" required>
+                </div>
+                <div>
+                    <label for="city">City:</label>
+                    <input type="text" id="city" name="city" required>
+                </div>
+                <div>
+                    <label for="postalCode">Postal Code:</label>
+                    <input type="text" id="postalCode" name="postalCode" required>
+                </div>
+                <div>
+                    <label for="country">Country:</label>
+                    <input type="text" id="country" name="country" required>
+                </div>
+                <div>
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                <div>
+                    <label for="phone">Phone:</label>
+                    <input type="tel" id="phone" name="phone" required>
+                </div>
+            </section>
+
+            <!-- Payment Information -->
+            <section class="payment-info">
+                <h2>Payment Information</h2>
+                <div>
+                    <label for="cardNumber">Card Number:</label>
+                    <input type="text" id="cardNumber" name="cardNumber" required>
+                </div>
+                <div>
+                    <label for="expiryDate">Expiry Date:</label>
+                    <input type="text" id="expiryDate" name="expiryDate" placeholder="MM/YY" required>
+                </div>
+                <div>
+                    <label for="cvv">CVV:</label>
+                    <input type="text" id="cvv" name="cvv" required>
+                </div>
+            </section>
+
+            <!-- Submit Button -->
+            <button type="submit" class="submit-btn">Place Order</button>
+        </form>
+
+        <!-- Confirmation Message -->
+        <div id="confirmationMessage" class="confirmation-message">
+            <h2>Thank you for your order!</h2>
+            <p>Your order number is: <span id="orderNumber"></span></p>
+            <p>We have sent a confirmation email to <span id="confirmEmail"></span>.</p>
+        </div>
+    </div>
+
+    <script src="checkout.js"></script>
+</body>
+
+</html>

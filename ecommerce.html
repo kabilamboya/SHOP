@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Smart Devices Store</title>
+    <link rel="stylesheet" href="ecommerce.css">
+</head>
+<body>
+    <header> <h1>Smart Devices Store</h1> </header>
+
+        <div id="cart">
+            <button onclick="toggleCartModal()">Cart (<span id="cartCount">0</span>)</button>
+        </div>
+        <nav class="Menu">
+            <a href="ecommerce.html">Shop</a></li>
+            <a href="subscribe.html">Subscribe</a></li>
+        </nav>
+
+    <main>
+        <section id="filters">
+            <input type="text" id="searchInput" placeholder="Search for products..." />
+            <select id="categoryFilter" onchange="filterProducts()"></select>
+            <button id="clearFilter">Clear Filters</button>
+            <span id="clearIcon" onclick="clearFilters()" style="cursor:pointer;">❌</span>
+        </section>
+
+        <section id="productGrid" class="product-grid"></section>
+
+        <p id="feedbackMessage"></p>
+    </main>
+
+    <div id="toast" class="toast"></div>
+
+    <!-- Cart Modal -->
+    <div id="cartModal" class="modal">
+        <div class="modal-content">
+            <span onclick="toggleCartModal()" class="close">&times;</span>
+            <h2>Your Cart</h2>
+            <p id="cartItems">Your cart is empty.</p>
+        </div>
+    </div>
+
+    <!-- Checkout Modal -->
+    <div id="checkoutModal" class="modal">
+        <div class="modal-content">
+            <span onclick="toggleCheckoutModal()" class="close">&times;</span>
+            <h2>Checkout</h2>
+            <p id="checkoutItems">No items in cart.</p>
+            <button onclick="checkout()">Proceed to Checkout</button>
+        </div>
+    </div>
+
+    <div id="filterControls">
+        <div id="feedbackMessage"></div>
+    </div>
+    
+    <footer>
+        <p>&copy; 2024 Sync-Store. All Rights Reserved.</p>
+    </footer>
+
+    <script src="ecommerce.js"></script>
+</body>
+</html>

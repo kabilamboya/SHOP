@@ -1,0 +1,350 @@
+/* General Styles */
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background: url('path/to/background-image.jpg') center/cover no-repeat; /* Background image */
+    background-color: #00FFFF;
+    color: #000000; /* Black */
+    transition: margin-left 0.3s ease; /* Smooth transition for content shift */
+}
+
+header {
+    background-color: #3aa0a8; /* Teal Green */
+    padding: 20px;
+    text-align: center;
+}
+
+header p {
+    color: #ffd700; /* Golden Yellow */
+    font-weight: bold;
+    font-size: 1.6em;
+}
+
+h1, h2, h3 {
+    font-size: 1.5em;
+    margin: 0;
+}
+
+h1 {
+    color: rgb(105, 204, 7);
+    padding: 30px;
+}
+
+h2 {
+    color: #ffd700;
+    padding: 30px;
+}
+
+h3 {
+    color: #000000;
+    padding: 30px;
+}
+
+p {
+    line-height: 1.6;
+    color: rgb(255, 255, 255);
+    padding: 30px;
+}
+
+/* Menu Styles */
+.menu {
+    background-color: #fff; /* White background */
+    border-bottom: 2px solid #c300ff; /* Purple demarcation */
+    display: flex;
+    justify-content: space-around;
+    padding: 10px 0;
+    position: relative;
+}
+
+.menu a {
+    color: #000; /* Black text */
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1.2em;
+    transition: color 0.3s ease;
+    padding: 10px 20px;
+    position: relative;
+    z-index: 1;
+}
+
+.menu a:hover {
+    color: #00FFFF; /* Cyan on hover */
+}
+
+.menu a::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #3aa0a8; /* Teal Green */
+    z-index: -1;
+    transform: scaleX(0);
+    transform-origin: bottom left;
+    transition: transform 0.3s ease;
+}
+
+.menu a:hover::before {
+    transform: scaleX(1);
+    transform-origin: bottom right;
+}
+
+/* Social Icons Styles */
+.social-icons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.5em;
+    margin-top: 10px;
+}
+
+.social-icons a {
+    color: #3aa0a8; /* Teal Green */
+    text-decoration: none;
+    transition: color 0.3s ease;
+    margin: 0 10px; /* Adjust the margin to add space between icons */
+    display: inline-block;
+}
+
+.social-icons a img {
+    width: 30px; /* Adjust size of social media icons */
+    height: 30px; /* Maintain aspect ratio */
+}
+
+.social-icons a:hover {
+    color: #ffd700; /* Golden Yellow */
+}
+
+/* Portfolio Menu Styles */
+.portfolio-menu {
+    background-color: rgba(139, 58, 218, 0.8); /* Purple with 80% opacity */
+    border: 30px solid #ffffff; /* White border */
+    border-radius: 30px;
+    box-shadow: 0 0 35px rgba(0, 0, 0, 0.5); /* Shadow effect */
+    margin-bottom: 20px;
+}
+
+/* Project Carousel Styles */
+.carousel-container {
+    position: relative;
+    max-width: 1000px;
+    margin: 0 auto;
+    display: flex;
+    overflow: hidden; /* Hide the extra projects */
+    padding: 40px 0;
+}
+
+.project-carousel {
+    animation: autoScroll 30s linear infinite;
+    display: flex;
+    transition: transform 0.5s ease; /* Smooth transition */
+    overflow: hidden; /* Hide scrollbars */
+    will-change: transform; /* Enhances performance for the transform transition */
+}
+
+.project {
+    flex: 0 0 calc(100% / 3 - 20px); /* Show 3 projects at a time with margins */
+    margin: 0 10px; /* Space between projects */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    transition: transform 0.3s ease;
+    height: 300px; /* Adjust height as needed */
+}
+
+.project img {
+    border-radius: 10px;
+    width: 100%;
+    height: 200px; /* Keep height consistent for all cards */
+    object-fit: cover;
+}
+
+.project:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+}
+
+.project .details h3 {
+    font-size: 1.5em;
+    color: #3aa0a8;
+}
+
+.project .details p {
+    font-size: 1em;
+    line-height: 1.6;
+    color: #555;
+}
+
+.project .details .cta-button {
+    background-color: #3aa0a8; /* Teal button */
+    color: #fff;
+    border: none;
+    border-radius: 25px;
+    padding: 10px 20px;
+    text-transform: uppercase;
+    font-size: 0.9em;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin-top: 15px;
+    display: inline-block;
+}
+
+.project .details .cta-button:hover {
+    background-color: #8b3ada; /* Purple hover */
+}
+
+/* Hero Section Styles */
+.hero-section {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: url('path/to/your-image.jpg') center/cover no-repeat; /* Full-width hero background */
+    padding: 50px 20px;
+    min-height: 450px; /* Taller hero section */
+    position: relative;
+    color: #fff;
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.2); /* Shadow to create depth */
+}
+
+.hero-content {
+    background-color: rgba(0, 0, 0, 0.6); /* Dark semi-transparent background for contrast */
+    padding: 40px;
+    border-radius: 10px;
+    max-width: 500px;
+    color: #fff;
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.3);
+}
+
+.hero-content h1 {
+    color: #ffd700; /* Golden Yellow for titles */
+    font-size: 2.5em;
+    margin-bottom: 20px;
+}
+
+.hero-content p {
+    font-size: 1.2em;
+    line-height: 1.8;
+    margin-bottom: 20px;
+}
+
+.call-button {
+    display: inline-block;
+    padding: 12px 30px;
+    background: linear-gradient(to right, #8B3ADA, #3aa0a8); /* Smooth gradient */
+    color: #fff;
+    border-radius: 30px;
+    font-size: 1.1em;
+    font-weight: bold;
+    text-transform: uppercase;
+    text-decoration: none;
+    transition: background 0.3s ease, transform 0.3s ease;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1); /* Button shadow */
+}
+
+.call-button:hover {
+    background: linear-gradient(to right, #3aa0a8, #8B3ADA); /* Reverse gradient */
+    transform: translateY(-5px); /* Lift button on hover */
+    box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.2);
+}
+
+.hero-image img {
+    max-width: 400px; /* Control the size of the image */
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.3); /* Stronger shadow for the hero image */
+}
+
+/* Side Panel Styles */
+.side-panel {
+    position: fixed;
+    top: 0;
+    left: -250px; /* Start off-screen */
+    width: 250px;
+    height: 100%;
+    background-color: #2a8f9e; /* Slightly darker teal */
+    color: #ffffff; /* White text */
+    padding: 20px;
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+    transition: left 0.3s ease; /* Smooth transition for sliding in and out */
+}
+
+.side-panel.open {
+    left: 0; /* Move into view */
+}
+
+.side-panel h2 {
+    margin-top: 0;
+}
+
+.side-panel a {
+    display: block;
+    color: #ffffff; /* White text */
+    text-decoration: none;
+    padding: 10px;
+    margin-bottom: 10px;
+    font-size: 1.2em;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.side-panel a:hover {
+    background-color: #3aa0a8; /* Teal Green */
+    color: #ffffff; /* White text */
+}
+
+/* Footer Styles */
+footer {
+    background-color: #3aa0a8; /* Teal Green */
+    color: #ffffff; /* White text */
+    padding: 20px;
+    text-align: center;
+}
+
+footer p {
+    margin: 0;
+    font-size: 1em;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .hero-section {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .hero-content {
+        margin: 0 auto;
+        max-width: 90%;
+    }
+
+    .carousel-container {
+        flex-direction: column;
+    }
+
+    .project {
+        flex: 0 0 100%; /* Full-width projects in smaller screens */
+    }
+
+    .menu {
+        flex-direction: column;
+    }
+}
+
+@media (max-width: 480px) {
+    .menu a {
+        font-size: 1em;
+    }
+
+    .project {
+        margin: 0 5px;
+    }
+
+    .call-button {
+        font-size: 1em;
+        padding: 10px 20px;
+    }
+}

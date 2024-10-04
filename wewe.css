@@ -1,0 +1,95 @@
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    color: #333;
+}
+
+header {
+    background-color: #007BFF; /* Unified header background color */
+    color: white;
+    padding: 1rem; /* Consistent padding */
+    text-align: center;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin-right: 1rem; /* Consistent margin */
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: white; /* Consistent link color with header */
+}
+
+/* Hero Section */
+.hero {
+    background: #3aa0a8; /* Teal Green */
+    color: white;
+    padding: 2rem 0;
+    text-align: center;
+}
+
+.hero h2 {
+    margin: 0;
+}
+
+.btn-primary {
+    background: #28a745;
+    color: white;
+    padding: 0.5rem 1rem;
+    text-decoration: none;
+    border-radius: 0.3rem;
+}
+
+/* Main Section */
+main {
+    padding: 2rem;
+}
+
+/* Service Card */
+.service-card {
+    display: inline-block;
+    width: 45%;
+    margin: 1rem 0;
+    padding: 1rem;
+    border: 1px solid #ddd;
+    border-radius: 0.3rem;
+}
+
+.service-card img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 0.3rem;
+}
+
+/* Call-to-Action Section */
+.cta {
+    background: #f8f9fa;
+    padding: 2rem;
+    text-align: center;
+}
+
+/* Footer */
+footer {
+    background: #34403b;
+    color: white;
+    padding: 1rem;
+    text-align: center;
+}
+
+footer a {
+    color: white;
+    text-decoration: none;
+    margin: 0 0.5rem;
+}
+
+.social-media a {
+    margin: 0 0.5rem;
+}

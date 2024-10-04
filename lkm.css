@@ -1,0 +1,247 @@
+/* Common Styles */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+    color: #333; /* Ensuring good text contrast */
+    margin: 10px;
+    padding: 20px;
+    display: flex; /* Using flexbox for layout */
+    flex-direction: column; /* Main axis is vertical */
+    min-height: 100vh; /* Ensure full height */
+}
+
+header {
+    background-color: #2ecc71; /* Consistent background color */
+    color: #fff; /* Consistent text color */
+    padding: 20px;
+    text-align: center;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 36px;
+    font-family: helvetica;
+    color: #600256;
+}
+
+h2 {
+    margin: 0;
+    font-size: 24px;
+    font-family: monospace;
+    background-color: #600256;
+    color: #2ecc71;
+}
+
+/* Main Content Section */
+.main-content {
+    flex: 1; /* Take remaining vertical space */
+    display: flex; /* Nested flexbox for side-by-side layout */
+    overflow-x: hidden; /* Hide horizontal overflow */
+}
+
+/* Blog Section */
+.post {
+    flex: 1; /* Take remaining horizontal space */
+    padding: 20px;
+    margin: 20px;
+    font-family: monospace;
+    font-size: 16px;
+}
+
+.sidebar {
+    width: 300px;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    overflow-y: auto; /* Enable vertical scrolling */
+    max-height: calc(100vh - 60px); /* Adjust height based on viewport height and header height */
+}
+
+
+/* Sidebar Tile */
+.sidebar .tile {
+    margin-bottom: 20px; /* Spacing between tiles */
+    background-color: #f9f9f9; /* Light background color */
+    border-radius: 10px; /* Rounded corners */
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1); /* Box shadow for depth */
+    padding: 20px;
+    transition: transform 0.3s ease; /* Smooth transition for hover effect */
+}
+
+/* Hover Effect */
+.sidebar .tile:hover {
+    transform: translateY(-5px); /* Move tile upward for depth illusion */
+}
+
+/* Footer Section */
+footer {
+    background-color: #333; /* Solid background color */
+    color: #fff; /* Text color */
+    text-align: center;
+    padding: 20px;
+}
+
+.testimonial {
+    margin-top: 50px;
+    padding: 20px;
+    background-color: #600256;
+    border-radius: 10px;
+}
+
+.testimonial h2 {
+    margin-bottom: 20px;
+    text-align: center;
+    font-size: 20px;
+    color: #1fd6c6;
+}
+
+.testimonial-item {
+    margin-bottom: 20px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #ddd;
+    display: flex;
+    align-items: center;
+}
+
+.testimonial-avatar {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    margin-right: 15px;
+}
+
+.testimonial-item p {
+    font-size: 14px;
+    line-height: 1.5;
+    font-family: monospace;
+}
+
+.testimonial-author {
+    margin-top: 10px;
+    font-style: italic;
+}
+
+        /* Additional CSS for Testimonials */
+        .message-bubble {
+            background-color: #f9f9f9;
+            padding: 10px;
+            border-radius: 10px;
+            margin-bottom: 20px;
+            display: flex;
+            align-items: center;
+        }
+
+        .avatar {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            margin-right: 10px;
+        }
+
+        .message-content {
+            flex: 1;
+        }
+
+        .sidebar {
+            width: 300px;
+            background-color: #fff;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            overflow-y: auto; /* Enable vertical scrolling */
+        }
+        
+        .post-tile {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 10px;
+            margin-bottom: 20px;
+        }
+        
+        .post-tile img {
+            width: 100%;
+            border-radius: 10px;
+        }
+        
+        .post-description {
+            padding: 10px;
+            background-color: #f9f9f9;
+            border-radius: 10px;
+        }
+        
+        .post-description a {
+            text-decoration: none;
+            color: #333;
+            font-weight: bold;
+            transition: color 0.3s ease;
+        }
+        
+        .post-description a:hover {
+            color: #2ecc71;
+        }
+        
+        .reactions {
+            color: #999;
+            font-size: 12px;
+        }
+
+        .social-icons {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 1.5em;
+            margin-top: 10px;
+        }
+
+        .social-icons a {
+            color: #3aa0a8; /* Teal Green */
+            text-decoration: none;
+            transition: color 0.3s ease;
+            margin: 0 10px; /* Adjust the margin to add space between icons */
+        }
+
+        .social-icons a:hover {
+            color: #ffd700; /* Golden Yellow */
+        }
+
+        .menu {
+            background-color: #fff; /* White background */
+            border-bottom: 2px solid #c300ff; /* Black demarcation */
+            display: flex;
+            justify-content: space-around;
+            padding: 10px 0;
+            position: relative;
+        }
+
+        .menu a {
+            color: #000; /* Black text */
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 1.2em;
+            transition: color 0.3s ease;
+            padding: 10px 20px;
+            position: relative;
+            z-index: 1;
+        }
+
+        .menu a:hover {
+            color: #00FFFF; /* Cyan on hover */
+        }
+
+        .menu a::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-color: #3aa0a8; /* Teal Green */
+            z-index: -1;
+            transform: scaleX(0);
+            transform-origin: bottom left;
+            transition: transform 0.3s ease;
+        }
+
+        .menu a:hover::before {
+            transform: scaleX(1);
+            transform-origin: bottom right;
+        }

@@ -1,0 +1,132 @@
+/* General Styles */
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f5f5f5;
+    color: #333;
+}
+
+h1, h3 {
+    text-align: center;
+}
+
+p {
+    line-height: 1.6;
+    margin: 0 0 20px;
+}
+
+/* Header Styles */
+header {
+    background-color: #007BFF;
+    padding: 20px;
+    text-align: center;
+}
+
+nav.Menu ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+nav.Menu ul li {
+    display: inline-block;
+    margin: 0 10px;
+}
+
+nav.Menu ul li a {
+    color: white;
+    font-weight: bold;
+    padding: 10px 15px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+nav.Menu ul li a:hover {
+    background-color: #0056b3;
+}
+
+/* Terms and Conditions Section */
+.terms-conditions {
+    padding: 40px;
+    max-width: 800px;
+    margin: 40px auto;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.terms-conditions h1 {
+    font-size: 28px;
+    margin-bottom: 20px;
+}
+
+.terms-conditions h3 {
+    font-size: 20px;
+    margin-top: 30px;
+}
+
+.terms-conditions p {
+    font-size: 16px;
+    margin-bottom: 20px;
+    text-align: justify;
+}
+
+.terms-conditions ul {
+    list-style-type: disc;
+    margin-left: 20px;
+    margin-bottom: 20px;
+}
+
+.terms-conditions ul li {
+    margin-bottom: 10px;
+}
+
+/* Footer Styles */
+footer {
+    background-color: #333;
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+
+footer p {
+    margin: 0;
+}
+
+footer ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 10px 0;
+}
+
+footer ul li {
+    display: inline-block;
+    margin: 0 10px;
+}
+
+footer ul li a {
+    color: #f0f0f0;
+}
+
+footer ul li a:hover {
+    text-decoration: underline;
+}
+
+/* Responsive Design */
+@media (max-width: 600px) {
+    .terms-conditions {
+        padding: 20px;
+        margin: 20px auto;
+    }
+
+    nav.Menu ul li {
+        display: block;
+        margin: 10px 0;
+    }
+
+    footer ul li {
+        display: block;
+        margin-bottom: 10px;
+    }
+}

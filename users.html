@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Users - Admin Dashboard</title>
+    <link rel="stylesheet" href="dashboard.css">
+    <style>
+        /* Modal Styles */
+        .modal {
+            display: none; 
+            position: fixed; 
+            z-index: 1; 
+            left: 0;
+            top: 0;
+            width: 100%; 
+            height: 100%; 
+            overflow: auto; 
+            background-color: rgba(0,0,0,0.4); 
+            padding-top: 60px;
+            transition: opacity 0.3s ease;
+        }
+
+        .modal-content {
+            background-color: #fefefe;
+            margin: 5% auto; 
+            padding: 20px;
+            border: 1px solid #888;
+            width: 80%; 
+            max-width: 500px; 
+            transition: transform 0.3s ease;
+        }
+
+        .close {
+            color: #aaa;
+            float: right;
+            font-size: 28px;
+            font-weight: bold;
+        }
+
+        .close:hover,
+        .close:focus {
+            color: black;
+            text-decoration: none;
+            cursor: pointer;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .modal-content {
+                width: 90%;
+            }
+        }
+
+        /* Additional Styles */
+        .search-bar {
+            width: calc(100% - 150px);
+            padding: 10px;
+            border-radius: 5px;
+            border: 1px solid #ddd;
+            font-size: 16px;
+        }
+
+        .user-info {
+            display: flex;
+            align-items: center;
+        }
+
+        .avatar {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            margin-left: 10px;
+        }
+
+        .status.active {
+            color: green;
+        }
+
+        .status.inactive {
+            color: red;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <aside class="sidebar">
+            <div class="logo">SHOPMART</div>
+            <nav>
+                <ul class="menu">
+                    <li><a href="dashboard.html"><i class="fas fa-tachometer-alt" aria-hidden="true"></i> Dashboard</a></li>
+                    <li><a href="orders.html"><i class="fas fa-box" aria-hidden="true"></i> Orders</a></li>
+                    <li><a href="products.html"><i class="fas fa-tags" aria-hidden="true"></i> Products</a></li>
+                    <li><a href="customers.html"><i class="fas fa-users" aria-hidden="true"></i> Customers</a></li>
+                    <li><a href="messages.html"><i class="fas fa-envelope" aria-hidden="true"></i> Messages</a></li>
+                    <li><a href="users.html"><i class="fas fa-user" aria-hidden="true"></i> Users</a></li>
+                    <li><a href="teams.html"><i class="fas fa-users-cog" aria-hidden="true"></i> Teams</a></li>
+                    <li><a href="#"><i class="fas fa-sign-out-alt" aria-hidden="true"></i> Log Out</a></li>
+                </ul>
+            </nav>
+        </aside>
+
+        <main class="main-content">
+            <header>
+                <input type="text" placeholder="Search Users..." class="search-bar" aria-label="Search Users">
+                <div class="user-info">
+                    <span>John Watson</span>
+                    <img src="R.jpg" alt="User Avatar" class="avatar">
+                </div>
+            </header>
+
+            <section class="users">
+                <h3>User List</h3>
+                <button id="openUserModal" class="create-btn">+ Create User</button>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>User ID</th>
+                            <th>Name</th>
+                            <th>Email</th>
+                            <th>Role</th>
+                            <th>Status</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <!-- Dummy data -->
+                        <tr>
+                            <td>#501</td>
+                            <td>Michael Brown</td>
+                            <td>michael@example.com</td>
+                            <td>Admin</td>
+                            <td class="status active">Active</td>
+                        </tr>
+                        <tr>
+                            <td>#502</td>
+                            <td>Emily Davis</td>
+                            <td>emily@example.com</td>
+                            <td>Editor</td>
+                            <td class="status inactive">Inactive</td>
+                        </tr>
+                        <!-- Add more rows as needed -->
+                    </tbody>
+                </table>
+            </section>
+        </main>
+    </div>
+
+    <!-- The Modal -->
+    <div id="userModal" class="modal" aria-hidden="true">
+        <div class="modal-content">
+            <span class="close" aria-label="Close">&times;</span>
+            <h3>Create New User</h3>
+            <form class="create-form">
+                <label for="userName">Name:</label>
+                <input type="text" id="userName" name="userName" required aria-required="true">
+
+                <label for="userEmail">Email:</label>
+                <input type="email" id="userEmail" name="userEmail" required aria-required="true">
+
+                <label for="userRole">Role:</label>
+                <select id="userRole" name="userRole">
+                    <option value="admin">Admin</option>
+                    <option value="editor">Editor</option>
+                    <option value="viewer">Viewer</option>
+                </select>
+
+                <button type="submit">Create User</button>
+            </form>
+        </div>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const modal = document.getElementById("userModal");
+            const btn = document.getElementById("openUserModal");
+            const span = document.querySelector(".close");
+
+            btn.addEventListener('click', () => modal.style.display = "block");
+
+            span.addEventListener('click', () => modal.style.display = "none");
+
+            window.addEventListener('click', (event) => {
+                if (event.target === modal) {
+                    modal.style.display = "none";
+                }
+            });
+        });
+    </script>
+</body>
+</html>
